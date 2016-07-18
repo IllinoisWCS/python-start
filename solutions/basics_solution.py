@@ -4,8 +4,7 @@ class Basics:
     '''
 
     def addition(self, a, b):
-        return 0
-
+        return a + b
 
 
     '''
@@ -24,24 +23,22 @@ class Basics:
         # Helpful: elif stands for 'else if'
         if a == None and b != None and c != None:
             missing_side = 'a'
-            print 'a is missing'
         elif a != None and b == None and c != None:
-            print 'b is missing'
+            missing_side = 'b'
         elif a != None and b != None and c == None:
-            print 'c is missing'
+            missing_side = 'c'
         else:
-            print 'Your parameters seem wrong... Perhaps you should see what you entered'
             return False
 
         # Once we know which side is missing, we should calculate and return the result
         # Helpful: the ** operator does exponents, e.g. 2**2 is 4
         # P.S. you can use decimal numbers with **
         if missing_side == 'a':
-            return
+            return (c**2 - b**2)**0.5
         elif missing_side == 'b':
-            return
+            return (c**2 - a**2)**0.5
         else:
-            return
+            return (a**2 + b**2)**0.5
 
 
     '''

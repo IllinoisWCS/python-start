@@ -1,5 +1,5 @@
 # This imports the file that we worked in
-from basics import Basics as basic
+from basics_solution import Basics as basic
 # This creates an object with all the functions we created
 b = basic()
 
@@ -11,3 +11,5 @@ print('Addition Success')
 assert(b.pythagorean_theorem(b = 4, c = 5) == 3)
 assert(b.pythagorean_theorem(a = 3, c = 5) == 4)
 assert(b.pythagorean_theorem(a = 3, b = 4) == 5)
+assert(b.pythagorean_theorem() == False)
+print('Pythagorean Theorem success')

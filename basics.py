@@ -1,0 +1,47 @@
+class Basics:
+    '''
+    Let's start off simple. Fill in this function so that it takes two parameters and returns the sum of those two.
+    '''
+
+    def addition(self, a, b):
+        return 0
+
+
+
+    '''
+    If you got past that, let's create a function for some math formulas you may have learned in the past
+
+    Pythagorean Theorem, used to calculate the length of a missing side of a right triangle (one with a single 90 degree angle) commonly notated as a^2 + b^2 = c^2
+
+    Let's try to get a bit fancier by allowing a user to specify which parameters they have so we don't have to create multiple functions depending on which triangle side is missing
+    '''
+
+    def pythagorean_theorem(self, a = None, b = None, c = None):
+        # We should detect and reassign 'missing_side' with which parameter is missing so we can calculate it
+        missing_side = None
+
+        # Do you understand how this works?
+        # Helpful: elif stands for 'else if'
+        if a == None and b != None and c != None:
+            missing_side = 'a'
+            print 'a is missing'
+        elif a != None and b == None and c != None:
+            print 'b is missing'
+        elif a != None and b != None and c == None:
+            print 'c is missing'
+        else:
+            print 'Your parameters seem wrong... Perhaps you should see what you entered'
+            return False
+
+        # Once we know which side is missing, we should calculate and return the result
+        # Helpful: the ** operator does exponents, e.g. 2**2 is 4
+        if missing_side == 'a':
+            return
+        elif missing_side == 'b':
+            return
+        else:
+            return
+
+
+    '''
+    '''

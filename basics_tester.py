@@ -13,3 +13,8 @@ assert(b.pythagorean_theorem(a = 3, c = 5) == 4)
 assert(b.pythagorean_theorem(a = 3, b = 4) == 5)
 assert(b.pythagorean_theorem() == False)
 print('Pythagorean Theorem success')
+
+assert(b.string_count('abc acb abc bca cab abc', 'abc') == 3)
+assert(b.string_count('abc acb abc bca cab abc', 'abasdfc') == 0)
+print('String count function')
+

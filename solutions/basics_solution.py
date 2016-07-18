@@ -50,8 +50,22 @@ class Basics:
     "There are many times of apples. Granny Smith apples, Fuji apples, and Red Delicious apples are just a few."
     and the target string is "apples" , the function would return 4
 
-
+    Helpful: the built-in function split(), for each loops
     '''
 
     def string_count(source, target):
-        return
+        # Store a counter variable
+        num_seen = 0
+
+        # Let's first split up the source string into an ordered list of words
+        # and store it in 'source_words"
+        source_words = source.split()
+
+        # Now, we can use a for each loop to scan through and count how many
+        # instances of our target string we have
+        for word in source_words:
+            if word == target:
+                # note, in some languages you may be inclined to use
+                # num_seen++, but that isn't in Python
+                num_seen += 1
+        return num_seen

@@ -53,8 +53,10 @@ class Basics:
     "There are many times of apples. Granny Smith apples, Fuji apples, and Red Delicious apples are just a few."
     and the target string is "apples" , the function would return 4
 
-
+    Things to research that may help you:
+        - str.split() https://docs.python.org/2/library/stdtypes.html#str.split
+        - for loops
     '''
 
-    def string_count(source, target):
+    def string_count(self, source, target):
         return

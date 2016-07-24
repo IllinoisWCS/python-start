@@ -3,7 +3,7 @@ DON'T CHANGE ANYTHING IN THIS FILE
 '''
 
 import unittest
-from basics_solution import Basics as basic
+from basics import Basics as basic
 # This creates an object with all the functions we created
 b = basic()
 

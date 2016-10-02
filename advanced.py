@@ -1,10 +1,10 @@
 '''
 This time, let's pick our own csv data sets and visualize them!
 
-Download either the Netflix or the Mashable dataset to get started
+Download the Mashable dataset to get started
 '''
 
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 import csv
 
 '''
@@ -24,7 +24,7 @@ class Advanced:
         result = []
 
         # change this with the location of your data file
-        file_dir = 'dataOnlineNewsPopularity/OnlineNewsPopularity.csv'
+        file_dir = 'data/OnlineNewsPopularity/OnlineNewsPopularity.csv'
         with open(file_dir, 'rb') as f:
             reader = csv.reader(f)
             headers = reader.next()
@@ -42,6 +42,7 @@ class Advanced:
 
     Edit the following function to accomplish this
     '''
+
     def graph_data(self):
 
         # these indices are which column the data is stored in in the csv file

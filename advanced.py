@@ -24,7 +24,7 @@ class Advanced:
         result = []
 
         # change this with the location of your data file
-        file_dir = '../data/OnlineNewsPopularity/OnlineNewsPopularity.csv'
+        file_dir = 'dataOnlineNewsPopularity/OnlineNewsPopularity.csv'
         with open(file_dir, 'rb') as f:
             reader = csv.reader(f)
             headers = reader.next()
@@ -61,8 +61,6 @@ class Advanced:
             y_axis_values.append(row[y_axis_index])
         plt.plot(x_axis_values, y_axis_values)
         plt.show()
-
-        return
 
     '''
     Now try to find out the average number of images in a post. This

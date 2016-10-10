@@ -26,5 +26,22 @@ class TestBasicMethods(unittest.TestCase):
         self.assertTrue(b.string_count('abc acb abc bca cab abc', 'abasdfc') == 0)
         print('String count function')
 
+    def test_min_value(self):
+        self.assertTrue(b.min_value([5, 8, 2, 0, 4, 3, 2]) == 0)
+        print('Min value function')
+
+    def test_max_value(self):
+        self.assertTrue(b.min_value([5, 8, 2, 0, 4, 3, 2]) == 8)
+        print('Max value function')
+
+    def test_average_value(self):
+        self.assertTrue(b.average([4, 0, 2, 3, 0, 3]) == 2)
+        print('Average function')
+
+    def test_median_value(self):
+        self.assertTrue(b.median([5, 8, 2, 0, 4, 3, 2]) == 3)
+        self.assertTrue(b.median([5, 8, 2, 0, 3, 3]) == 3)
+        print('Median function')
+
 if __name__ == '__main__':
         unittest.main()

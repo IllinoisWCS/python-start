@@ -13,7 +13,7 @@ class Intermediate:
 
     and we called the function with 'apples' and 'oranges' as our topics, the function should return
     [64, 70]
-    If one of the topics querid is not in the book_index, you should return False for now.
+    If one of the topics queried is not in the book_index, you should return False for now.
 
 
     You may find some help from these docs: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
@@ -33,6 +33,12 @@ class Intermediate:
 
     In this case, I want you to calculate the GPA of files that are in the format
     [ClassName, Grade]
+
+    Our parameter, csvfile, is a string that has the file name. In order to access its contents, you'll have to open the file to expose a file object. Then, you'll have to create a csv reader object and read the file line-by-line.
+
+    You may find some help from these docs:
+        - with open('filename', 'r') as f
+        - csv reader objects and their available functions - https://docs.python.org/2/library/csv.html
     '''
 
     def calculate_GPA_CSV(self, csvfile):

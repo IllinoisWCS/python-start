@@ -1,5 +1,5 @@
-DS_Store
-notebooks/DS_Store
+.DS_Store
+notebooks/.DS_Store
 solutions/
 .DS_Store
 test.py

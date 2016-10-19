@@ -62,7 +62,7 @@ class Basics:
         return
 
     '''
-    Since this tutorial is mainly about data science, let's figure out some ways to calculate some statistics using some built-in methods for Python. The next few functions all take in an array of numbers.
+    Since this tutorial is mainly about data science, let's figure out some ways to calculate some statistics using some built-in methods for Python. The next few functions all take in an array of numbers. An array is just a list of items, all of which have the same data type. We specify the array of numbers as type int.
 
     Calculate:
         - the minimum value of the array

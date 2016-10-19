@@ -17,5 +17,8 @@ class TestIntermediateMethods(unittest.TestCase):
         self.assertTrue(b.dictionary_exercise(book_index, 'apples', 'oranges') == [64,70])
         print('Dictionary Success')
 
+    # TODO: Add tests to test GPA CSV
+    # TODO: Add tests to test statistics function
+
 if __name__ == '__main__':
         unittest.main()

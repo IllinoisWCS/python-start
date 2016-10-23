@@ -44,4 +44,4 @@ class TestBasicMethods(unittest.TestCase):
         self.assertTrue(b.median([5, 8, 2, 0, 3, 3]) == 3)
 
 if __name__ == '__main__':
-        unittest.main()
+    unittest.main()

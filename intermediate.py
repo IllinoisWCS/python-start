@@ -16,7 +16,8 @@ class Intermediate:
     If one of the topics queried is not in the book_index, you should return False for now.
 
 
-    You may find some help from these docs: https://docs.python.org/3/tutorial/datastructures.html#dictionaries
+    You may find some help from these docs:
+        - https://docs.python.org/3/tutorial/datastructures.html#dictionaries
     '''
 
     def dictionary_exercise(self, book_index, topic1, topic2):
@@ -36,6 +37,8 @@ class Intermediate:
 
     Our parameter, csvfile, is a string that has the file name. In order to access its contents, you'll have to open the file to expose a file object. Then, you'll have to create a csv reader object and read the file line-by-line.
 
+    Feel free to use whatever GPA scale you're familiar with.
+
     You may find some help from these docs:
         - with open('filename', 'r') as f
         - csv reader objects and their available functions - https://docs.python.org/2/library/csv.html
@@ -45,14 +48,23 @@ class Intermediate:
         return False
 
     '''
-    In data science, we not only want to know the average, the median, the maximum and the minimum of a set of numbers that we're given, but also, how much that data varies.
+    In data science, we not only want to know the average, the median, the maximum and the minimum of a set of numbers that we're given, but also, how much those numbers vary.
 
-    We use the concept of variance and standard deviation. Variance is a numeric measure of the average difference between elements of the list of numbers. [TODO: Add in more detail] Taking the square root of variance yields a measure called standard deviation.
+    For this exercise, I'll refer to the array of numbers as our data. Each number in that array is called a data point.
 
-    With the mean and standard deviation, we can then designate a z-score for a certain element. [TODO: Add in more detail] [TODO: Add in more detail about percentile]
+    We use the concept of variance and standard deviation. Variance, intuitively, gives us a sense of how far apart data points are from the average. If variance is small, then we can say that our data is mostly centered around the average and our average actually is very representative of all data points. However, if variance is quite large, then we cannot say that. Our data varies way too much for our average to be representative.
 
-    In this case, we give a csvfile that has the following format: [TODO: Obtain this file]
+    You can calculate the variance via 3 steps.
+    1. Find the mean (or average).
+    2. For each data point, calculate its difference from the mean. Square this difference.
+    3. Sum all of the differences you find.
+
+    Taking the square root of variance yields a measure called standard deviation. Standard deviation is also a measure of how spread out our data points are. It is more often used by statisticians and data scientists to describe the spread of data points.
+
+    In this case, we give a csvfile that has the following format:
     [Country, GDP]
+
+    You'll need to use similar techniques above to read this file and it's values.
 
     Using the CSV parsing techniques you've learned above, fill in the functions below that calculate the following statistics about countries and their GDP values
     - Average GDP
@@ -61,16 +73,10 @@ class Intermediate:
     - Min GDP and which country has that GDP
     - Variance
     - Standard Deviation
-    - Which Percentile the following countries fall under with their GDP
-        - USA
-        - Ecuador
-        - Luxembourg
-        - Nigeria
-        - Thailand
-        - Any country of your choosing
 
     Hints:
-        - [TODO: insert links about variance, standard deviation, etc.]
+        - More reading on standard deviation and variance: http://www.mathsisfun.com/data/standard-deviation.html
+        - If you're interested in where this data came from: http://data.worldbank.org/indicator/NY.GDP.MKTP.CD
     '''
 
     def calculate_statistics(self, gdpfile):
@@ -80,13 +86,12 @@ class Intermediate:
 
         max_gdp = 0
         min_gdp = 0
-        country_with_highest_gdp = "USA"
-        country_with_lowest_gdp = "USA"
+        country_with_highest_gdp = 'USA'
+        country_with_lowest_gdp = 'USA'
 
         variance = 0
         standard_deviation = 0
 
-        # We'll create a dictionary to hold the percentiles mapped to their respective countries
-        countries_to_examine_percentiles = { "USA": 0, "Ecuador": 0, "Luxembourg": 0, "Nigeria": 0, "Thailand": 0 }
+        # Insert your code here!
 
-        return average, median, max_gdp, min_gdp, country_with_highest_gdp, country_with_lowest_gdp, variance, standard_deviation, countries_to_examine_percentiles
+        return average, median, max_gdp, min_gdp, country_with_highest_gdp, country_with_lowest_gdp, variance, standard_deviation

@@ -62,10 +62,12 @@ class Basics:
         return
 
     '''
-    Since this tutorial is mainly about data science, let's figure out some ways to calculate some statistics using some built-in methods for Python. The next few functions all take in an array of numbers. An array is just a list of items, all of which have the same data type. We specify the array of numbers as type int.
+    Since this tutorial is mainly about data science, let's figure out some ways to calculate some statistics using some built-in methods for Python. The next few functions all take in an array of numbers.
+
+    An array is just a list of items with a fixed order, all of which have the same data type. We specify the array of numbers as type int. In Python, it will be noted like this: [1, 3, 4, 6, 2]
 
     Calculate:
-        - the minimum value of the array
+        - the minimum value
         - the maximum value
         - the average
         - the median
@@ -73,6 +75,8 @@ class Basics:
     Things to research that may help you:
         - max(), min()
         - sorted()
+        - len()
+        - array indexing in python - how to access an element at position j, j being some number you specify
     '''
 
     def min_value(self, values):

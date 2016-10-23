@@ -1,5 +1,3 @@
-from math import sqrt
-
 class Basics:
     '''
     Let's start off simple. Fill in this function so that it takes two parameters and returns the sum of those two.
@@ -41,11 +39,11 @@ class Basics:
         # Helpful: the ** operator does exponents, e.g. 2**2 is 4
         # P.S. you can use decimal numbers with **
         if missing_side == 'a':
-            return sqrt(c**2 - b**2)
+            return (c**2 - b**2)**(0.5)
         elif missing_side == 'b':
-            return sqrt(c**2 - a**2)
+            return (c**2 - a**2)**(0.5)
         else:
-            return sqrt(a**2 + b**2)
+            return (a**2 + b**2)**(0.5)
 
 
     '''

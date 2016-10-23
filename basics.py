@@ -4,7 +4,7 @@ class Basics:
     '''
 
     def addition(self, a, b):
-        return 0
+        return a + b
 
 
 
@@ -26,8 +26,10 @@ class Basics:
             missing_side = 'a'
             print 'a is missing'
         elif a != None and b == None and c != None:
+            missing_side = 'b'
             print 'b is missing'
         elif a != None and b != None and c == None:
+            missing_side = 'c'
             print 'c is missing'
         else:
             print 'Your parameters seem wrong... Perhaps you should see what you entered'
@@ -37,11 +39,11 @@ class Basics:
         # Helpful: the ** operator does exponents, e.g. 2**2 is 4
         # P.S. you can use decimal numbers with **
         if missing_side == 'a':
-            return
+            return (c**2 - b**2)**(0.5)
         elif missing_side == 'b':
-            return
+            return (c**2 - a**2)**(0.5)
         else:
-            return
+            return (a**2 + b**2)**(0.5)
 
 
     '''
@@ -59,7 +61,7 @@ class Basics:
     '''
 
     def string_count(self, source, target):
-        return
+        return source.count(target)
 
     '''
     Since this tutorial is mainly about data science, let's figure out some ways to calculate some statistics using some built-in methods for Python. The next few functions all take in an array of numbers.
@@ -80,13 +82,13 @@ class Basics:
     '''
 
     def min_value(self, values):
-        return
+        return min(values)
 
     def max_value(self, values):
-        return
+        return max(values)
 
     def average(self, values):
-        return
+        return sum(values) / len(values)
 
     def median(self, values):
-        return
+        return sorted(values)[len(values) / 2]

@@ -13,7 +13,7 @@ This part is primarily for the ChicTech retreat where students will be using lab
 0. Download the zip file for this repository if you haven't done so already (ChicTech students should get this from a given link by the instructors. Unzip the file by double clicking and pressing the extract button in the top right and save it in the same folder that you downloaded it to. 
 1. Open up terminal on the EWS machine. You can find it in the Applications menu in the top left when you log in under the Utilities sublist.
 2. Navigate to the folder were you downloaded the zip file. Most likely, it has ended up in your Downloads folder and you can access that by typing the following: `cd Downloads/python-start` and then pressing enter. Once you are inside the folder, you should see that the bottom line in your terminal should have changed to say `python-start` 
-3. Inside this folder, type `./setup.sh` and it will start up the notebooks.
+3. Inside this folder, type `./setup.sh` and it will start up the notebooks. In case this doesn't work, type `chmod +x setup.sh` and press enter
 4. This will open up a web browser where we will be doing all of our Python coding. 
 5. You will find everything we are working on in the `/notebooks` folder. I would start with the first tutorial!
 6. When you are all done, make sure to save your work and press CTRL+C in the terminal and confirm that you want to close the notebook by typing `y` and pressing enter.

@@ -14,7 +14,7 @@ class Intermediate:
 
     and we called the function with 'apples' and 'oranges' as our topics, the function should return
     [64, 70].
-    
+
     If one of the topics queried is not in the book_index, you should return [], indicating that there doesn't exist any shared indices because, well, one of the topics is missing!
 
 
@@ -26,7 +26,7 @@ class Intermediate:
     '''
 
     def dictionary_exercise(self, book_index, topic1, topic2):
-        return False
+        return []
 
 
     '''

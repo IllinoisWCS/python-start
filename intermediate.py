@@ -1,4 +1,5 @@
 import csv
+import sys
 
 class Intermediate:
     '''
@@ -37,7 +38,18 @@ class Intermediate:
 
     Our parameter, csvfile, is a string that has the file name. In order to access its contents, you'll have to open the file to expose a file object. Then, you'll have to create a csv reader object and read the file line-by-line.
 
-    Feel free to use whatever GPA scale you're familiar with.
+    Our tests use the following scale. Assume all classes are 1 credit hour.
+    - A/A+ - 4.0
+    - A- - 3.7
+    - B+ - 3.3
+    - B - 3.0
+    - B- - 2.7
+    - C+ - 2.3
+    - C - 2.0
+    - C- - 1.7
+    - D+ - 1.3
+    - D - 1.0
+    - F - 0.0
 
     You may find some help from these docs:
         - with open('filename', 'r') as f
@@ -45,7 +57,8 @@ class Intermediate:
     '''
 
     def calculate_GPA_CSV(self, csvfile):
-        return False
+        # This is a default return value for this function. You'll want to change this!
+        return 0
 
     '''
     In data science, we not only want to know the average, the median, the maximum and the minimum of a set of numbers that we're given, but also, how much those numbers vary.
@@ -68,7 +81,6 @@ class Intermediate:
 
     Using the CSV parsing techniques you've learned above, fill in the functions below that calculate the following statistics about countries and their GDP values
     - Average GDP
-    - Median GDP
     - Max GDP and which country has that GDP
     - Min GDP and which country has that GDP
     - Variance
@@ -77,15 +89,16 @@ class Intermediate:
     Hints:
         - More reading on standard deviation and variance: http://www.mathsisfun.com/data/standard-deviation.html
         - If you're interested in where this data came from: http://data.worldbank.org/indicator/NY.GDP.MKTP.CD
+        - sys.float_info.max (sys is already imported for you)
+        - You'll want to store the GDP values you encounter while reading the CSV file into an array to calculate the variance - array.append
     '''
 
     def calculate_statistics(self, gdpfile):
-        # Default values are set for now. You'll want to change these!
+        # Default values are set for you
         average = 0
-        median = 0
 
         max_gdp = 0
-        min_gdp = 0
+        min_gdp = sys.float_info.max
         country_with_highest_gdp = 'USA'
         country_with_lowest_gdp = 'USA'
 
@@ -94,4 +107,4 @@ class Intermediate:
 
         # Insert your code here!
 
-        return average, median, max_gdp, min_gdp, country_with_highest_gdp, country_with_lowest_gdp, variance, standard_deviation
+        return average, max_gdp, min_gdp, country_with_highest_gdp, country_with_lowest_gdp, variance, standard_deviation

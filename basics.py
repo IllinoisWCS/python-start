@@ -1,3 +1,5 @@
+from math import sqrt
+
 class Basics:
     '''
     Let's start off simple. Fill in this function so that it takes two parameters and returns the sum of those two.

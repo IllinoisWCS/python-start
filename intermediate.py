@@ -13,12 +13,16 @@ class Intermediate:
         grapes: [3, 4, 5, 50, 64]
 
     and we called the function with 'apples' and 'oranges' as our topics, the function should return
-    [64, 70]
-    If one of the topics queried is not in the book_index, you should return False for now.
+    [64, 70].
+    
+    If one of the topics queried is not in the book_index, you should return [], indicating that there doesn't exist any shared indices because, well, one of the topics is missing!
 
 
     You may find some help from these docs:
-        - https://docs.python.org/3/tutorial/datastructures.html#dictionaries
+        - https://docs.python.org/2/tutorial/datastructures.html#dictionaries
+        - for element in array - looping through array elements instead of array indices
+        - key in dictionary - true or false of whether or not a key exists in the dictionary
+        - element in dictionary - true or false of whether or not a certain element is in the array
     '''
 
     def dictionary_exercise(self, book_index, topic1, topic2):

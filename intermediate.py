@@ -26,6 +26,18 @@ class Intermediate:
     '''
 
     def dictionary_exercise(self, book_index, topic1, topic2):
+        if topic1 in book_index and topic2 in book_index:
+            pages_topic1 = book_index[topic1]
+            pages_topic2 = book_index[topic2]
+            shared_pages = []
+            for elem1 in pages_topic1:
+                if elem1 in pages_topic2:
+                    shared_pages.append(elem1)
+            for elem2 in pages_topic2:
+                if elem2 in pages_topic1 and elem2 not in shared_pages:
+                    shared_pages.append(elem2)
+            if len(shared_pages) > 0:
+                return shared_pages
         return []
 
 
@@ -62,12 +74,41 @@ class Intermediate:
 
     def calculate_GPA_CSV(self, csvfile):
         # This is a default return value for this function. You'll want to change this!
-        return 0
+        overall_sum = 0
+        num_classes = 0
+        with open(csvfile, 'r') as gpafile:
+            reader = csv.DictReader(gpafile)
+            overall_sum = 0
+            num_classes = 0
+            for row in reader:
+                grade = row['Grade']
+                if grade == 'A+' or grade == 'A':
+                    overall_sum += 4.0
+                elif grade == 'A-':
+                    overall_sum += 3.7
+                elif grade == 'B+':
+                    overall_sum += 3.3
+                elif grade == 'B':
+                    overall_sum += 3.0
+                elif grade == 'B-':
+                    overall_sum += 2.7
+                elif grade == 'C+':
+                    overall_sum += 2.3
+                elif grade == 'C':
+                    overall_sum += 2.0
+                elif grade == 'C-':
+                    overall_sum += 1.7
+                elif grade == 'D+':
+                    overall_sum += 1.0
+                else:
+                    overall_sum += 0.0
+                num_classes += 1
+        return overall_sum/num_classes
 
     '''
-    In data science, we not only want to know the average, the median, the maximum and the minimum of a set of numbers that we're given, but also, how much those numbers vary.
+    In data science, we not only want to know the average, the median, the maximum and the minimum of a set of num_classesbers that we're given, but also, how much those num_classesbers vary.
 
-    For this exercise, I'll refer to the array of numbers as our data. Each number in that array is called a data point.
+    For this exercise, I'll refer to the array of num_classesbers as our data. Each num_classesber in that array is called a data point.
 
     We use the concept of variance and standard deviation. Variance, intuitively, gives us a sense of how far apart data points are from the average. If variance is small, then we can say that our data is mostly centered around the average and our average actually is very representative of all data points. However, if variance is quite large, then we cannot say that. Our data varies way too much for our average to be representative.
 
@@ -110,5 +151,28 @@ class Intermediate:
         standard_deviation = 0
 
         # Insert your code here!
+        num_countries = 0
+        gdps = []
+        countries = []
+
+        with open(gdpfile, 'r') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                gdp = float(row['GDP'])
+                gdps.append(gdp)
+                countries.append(row['Country'])
+                if gdp < min_gdp:
+                    min_gdp = gdp
+                    country_with_lowest_gdp = row['Country']
+                elif gdp > max_gdp:
+                    max_gdp = gdp
+                    country_with_highest_gdp = row['Country']
+                num_countries += 1
+                average += gdp
+                
+        average = average / num_countries
+        for gdp in gdps:
+            variance += (gdp - average)**(2.0)
+        standard_deviation = variance ** (0.5)
 
         return average, max_gdp, min_gdp, country_with_highest_gdp, country_with_lowest_gdp, variance, standard_deviation

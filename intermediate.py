@@ -106,9 +106,9 @@ class Intermediate:
         return overall_sum/num_classes
 
     '''
-    In data science, we not only want to know the average, the median, the maximum and the minimum of a set of num_classesbers that we're given, but also, how much those num_classesbers vary.
+    In data science, we not only want to know the average, the median, the maximum and the minimum of a set of numberss that we're given, but also, how much those numbers vary.
 
-    For this exercise, I'll refer to the array of num_classesbers as our data. Each num_classesber in that array is called a data point.
+    For this exercise, I'll refer to the array of numbers as our data. Each number in that array is called a data point.
 
     We use the concept of variance and standard deviation. Variance, intuitively, gives us a sense of how far apart data points are from the average. If variance is small, then we can say that our data is mostly centered around the average and our average actually is very representative of all data points. However, if variance is quite large, then we cannot say that. Our data varies way too much for our average to be representative.
 
@@ -169,7 +169,7 @@ class Intermediate:
                     country_with_highest_gdp = row['Country']
                 num_countries += 1
                 average += gdp
-                
+
         average = average / num_countries
         for gdp in gdps:
             variance += (gdp - average)**(2.0)

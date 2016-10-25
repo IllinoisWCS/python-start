@@ -1,3 +1,4 @@
 solutions/
 .DS_Store
 test.py
+**.pyc

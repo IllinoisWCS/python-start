@@ -90,14 +90,15 @@ class Intermediate:
         - More reading on standard deviation and variance: http://www.mathsisfun.com/data/standard-deviation.html
         - If you're interested in where this data came from: http://data.worldbank.org/indicator/NY.GDP.MKTP.CD
         - sys.float_info.max (sys is already imported for you)
+        - You'll want to store the GDP values you encounter while reading the CSV file into an array to calculate the variance - array.append
     '''
 
     def calculate_statistics(self, gdpfile):
-        # Default values are set for now. You'll want to change these!
+        # Default values are set for you
         average = 0
 
         max_gdp = 0
-        min_gdp = 0
+        min_gdp = sys.float_info.max
         country_with_highest_gdp = 'USA'
         country_with_lowest_gdp = 'USA'
 

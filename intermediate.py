@@ -22,6 +22,17 @@ class Intermediate:
     '''
 
     def dictionary_exercise(self, book_index, topic1, topic2):
+        pages_topic1 = book_index[topic1]
+        pages_topic2 = book_index[topic2]
+        shared_pages = []
+        for elem1 in pages_topic1:
+            if elem1 in pages_topic2:
+                shared_pages.append(elem1)
+        for elem2 in pages_topic2:
+            if elem2 in pages_topic1 and elem2 not in shared_pages:
+                shared_pages.append(elem2)
+        if len(shared_pages) > 0:
+            return shared_pages
         return False
 
 

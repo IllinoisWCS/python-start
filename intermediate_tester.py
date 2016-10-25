@@ -17,5 +17,21 @@ class TestIntermediateMethods(unittest.TestCase):
         }
         self.assertTrue(b.dictionary_exercise(book_index, 'apples', 'oranges') == [64,70])
 
+    def test_calculate_GPA_CSV(self):
+        print('Test calculate GPA function')
+        gpa = b.calculate_GPA_CSV('data/GPAData/gpadata.csv')
+        self.assertTrue(round(gpa, 2) == 3.52)
+
+    def test_calculate_statistics(self):
+        print('Test calculate statistics function')
+        average, max_gdp, min_gdp, country_with_highest_gdp, country_with_lowest_gdp, variance, standard_deviation = b.calculate_statistics('data/GDPData/GDPData.csv')
+        self.assertTrue(str(average) == "4.452496609e+11")
+        self.assertTrue(str(max_gdp) == "1.7946996e+13")
+        self.assertTrue(country_with_highest_gdp == "United States")
+        self.assertTrue(str(min_gdp) == "145237022.012")
+        self.assertTrue(country_with_lowest_gdp == "Kiribati")
+        self.assertTrue(str(variance) == "4.90159965423e+26")
+        self.assertTrue(str(standard_deviation) == "2.21395565769e+13")
+
 if __name__ == '__main__':
     unittest.main()

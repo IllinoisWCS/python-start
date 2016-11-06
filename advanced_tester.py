@@ -3,3 +3,5 @@ from advanced import Advanced as advanced
 b = advanced()
 
 b.graph_data()
+
+# Feel free to test more functions here

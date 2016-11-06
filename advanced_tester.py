@@ -5,3 +5,4 @@ b = advanced()
 b.graph_data()
 
 # Feel free to test more functions here
+b.get_average_images()

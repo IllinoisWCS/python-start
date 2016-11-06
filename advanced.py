@@ -69,4 +69,4 @@ class Advanced:
     You might want to check out these docs: http://matplotlib.org/api/pyplot_api.html
     '''
     def get_average_images(self):
-        return
+        return self.graph_data(1, 9)

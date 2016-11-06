@@ -2,3 +2,4 @@ solutions/
 .DS_Store
 test.py
 **.pyc
+notebooks/.ipynb_checkpoints

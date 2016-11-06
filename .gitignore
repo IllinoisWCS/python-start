@@ -1,6 +1,7 @@
 .DS_Store
 notebooks/.DS_Store
 solutions/
-test.py
-*.pyc
 notebooks/.ipynb_checkpoints
+.DS_Store
+test.py
+**.pyc
